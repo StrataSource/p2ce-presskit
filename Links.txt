@@ -1,0 +1,14 @@
+Website:            https://p2ce.org
+Play:               https://p2ce.org/play
+Report Issues:      https://p2ce.org/issues
+Wiki:               https://p2ce.org/wiki
+
+- Socials -
+Discord:            https://p2ce.org/discord
+YouTube:            https://p2ce.org/youtube
+GitHub:             https://p2ce.org/github
+
+- Misc -
+Clustered Update:   https://p2ce.org/clustered
+Portal 1: Add-On:   https://p2ce.org/portal1
+Half-Life 2 Add-On: https://p2ce.org/halflife2
