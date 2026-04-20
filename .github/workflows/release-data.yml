@@ -1,0 +1,37 @@
+name: Release Data Archive
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/data/**'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get short SHA
+        id: sha
+        run: echo "short=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
+
+      - name: Create ZIP archive
+        run: zip -r presskit.zip docs/data/
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: data-${{ steps.sha.outputs.short }}
+          name: Presskit ${{ steps.sha.outputs.short }}
+          body: |
+            Automated release from commit ${{ github.sha }}.
+
+            **Triggered by:** ${{ github.event.head_commit.message }}
+          files: presskit.zip
+          fail_on_unmatched_files: true
