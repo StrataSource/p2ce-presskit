@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;700&display=swap');
+
+:root {
+    --font-family: Lexend Deca, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    --font-size: 16px;
+
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+
+    --colors-base-50: #FBFBFB;
+    --colors-base-100: #EEEEEE;
+    --colors-base-200: #D4D4D4;
+    --colors-base-300: #BBBBBB;
+    --colors-base-400: #A2A2A2;
+    --colors-base-500: #888888;
+    --colors-base-600: #6F6F6F;
+    --colors-base-700: #555555;
+    --colors-base-800: #3C3C3C;
+    --colors-base-900: #222222;
+    --colors-base-950: #181818;
+
+    --colors-primary-50: #fef6ee;
+    --colors-primary-100: #fdead7;
+    --colors-primary-200: #f9d1af;
+    --colors-primary-300: #f5b07c;
+    --colors-primary-400: #f08547;
+    --colors-primary-500: #EC6726;
+    --colors-primary-600: #dd4c19;
+    --colors-primary-700: #b73817;
+    --colors-primary-800: #922e1a;
+    --colors-primary-900: #762818;
+    --colors-primary-950: #40120a;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background: var(--colors-base-950);
+    color: var(--colors-base-200);
+}
+
+a {
+    color: var(--colors-primary-400);
+}
+a:hover {
+    text-decoration: none;
+    color: var(--colors-primary-300);
+}
+
+body > section {
+    background: var(--colors-base-900);
+    padding: 75px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+body > section:nth-child(odd) {
+    background: var(--colors-base-950);
+}
+
+header {
+    background: var(--colors-base-950);
+    border-bottom: 1px solid var(--colors-base-800);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 110;
+    left: 0;
+    right: 0;
+    
+    & .wrapper {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 15px;
+        align-items: center;
+
+        & img {
+            height: 40px;
+        }
+        & nav {
+            display: flex;
+            gap: 25px;
+
+            & a {
+                color: var(--colors-base-100);
+                text-decoration: none;
+                font-weight: 600;
+                transition: 0.2s ease-in-out all;
+
+                &:hover {
+                    color: var(--colors-primary-500);
+                }
+            }
+        }
+    }
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 25px;
+
+    & h1 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        letter-spacing: -0.075rem;
+        color: var(--colors-base-200);
+
+        &:after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 4px;
+            margin-top: 7px;
+            border-radius: 100px;
+            background: var(--colors-primary-500);
+        }
+    }
+    & h2 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--colors-primary-400);
+    }
+    & p {
+        color: var(--colors-base-200);
+        line-height: 1.5rem;
+        max-width: 75ch;
+    }
+    & .subsection {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.links-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    align-items: flex-start;
+}
+.links-box div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.links-box a {
+    transition: 0.2s ease-in-out all;
+}
+
+.screenshot-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.screenshot-grid img {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    transition: 0.15s ease-in-out all;
+}
+.screenshot-grid img:hover {
+    transform: scale(1.15);
+    z-index: 100;
+}
+
+.logo-grid {
+    padding: 50px 25px;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.logo-grid img {
+    height: 100px;
+}
+.logo-grid.light {
+    background: var(--colors-base-100);
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+}
+.video-grid video {
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 5px;
+}
