@@ -1,5 +1,3 @@
-# Portal 2: Community Edition
-## Presskit
+# Portal 2: Community Edition Press Kit
 
-Website: [https://stratasource.github.io/p2ce-presskit](https://stratasource.github.io/p2ce-presskit)
-Download Zip: [https://p2ce.org/presskit](https://p2ce.org/presskit)
+View and download: [https://p2ce.org/presskit](https://p2ce.org/presskit)
